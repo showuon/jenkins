@@ -67,6 +67,7 @@ public class WindowsUtil {
                 nrBackslashes = nrBackslashes * 2;
             } else if (argument.charAt(i) == '"') {
                 // backslashes preceding a quote all need to be escaped along with the quote
+                // Luke
                 nrBackslashes = nrBackslashes * 2 + 1;
             }
             // else backslashes have no special meaning and don't need to be escaped here

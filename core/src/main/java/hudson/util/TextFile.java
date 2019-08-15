@@ -176,6 +176,7 @@ public class TextFile {
             long len = raf.length();
             // err on the safe side and assume each char occupies 4 bytes
             // additional 1024 byte margin is to bring us back in sync in case we started reading from non-char boundary.
+            // Luke
             long pos = Math.max(0, len - (numChars * 4 + 1024));
             raf.seek(pos);
 

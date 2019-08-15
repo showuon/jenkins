@@ -222,6 +222,7 @@ public abstract class Job<JobT extends Job<JobT, RunT>, RunT extends Run<JobT, R
                 } else {
                     RunT lB = getLastBuild();
                     synchronized (this) {
+                        // Luke
                         this.nextBuildNumber = lB != null ? lB.getNumber() + 1 : 1;
                     }
                     saveNextBuildNumber();

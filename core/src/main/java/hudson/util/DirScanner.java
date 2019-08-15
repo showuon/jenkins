@@ -156,6 +156,7 @@ public abstract class DirScanner implements Serializable {
             String parentName = file.getParent();
             if (parentName.length() > baseDirPathLength) {
                 // remove the trailing slash
+                // Luke
                 String parentRelativeName = parentName.substring(baseDirPathLength + 1);
 
                 // as the visit is done following depth-first approach, we just have to check the parent once

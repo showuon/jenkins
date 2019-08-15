@@ -106,6 +106,7 @@ public abstract class LazyBuildMixIn<JobT extends Job<JobT,RunT> & Queue.Task & 
         int next = asJob().getNextBuildNumber();
         if (next <= max) {
             LOGGER.log(Level.WARNING, "JENKINS-27530: improper nextBuildNumber {0} detected in {1} with highest build number {2}; adjusting", new Object[] {next, asJob(), max});
+            // Luke
             asJob().updateNextBuildNumber(max + 1);
         }
         RunMap<RunT> currentBuilds = this.builds;

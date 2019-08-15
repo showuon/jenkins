@@ -2345,6 +2345,7 @@ public class Jenkins extends AbstractCIBase implements DirectlyModifiableTopLeve
      * @since 1.263
      */
     public @Nonnull String getRootUrlFromRequest() {
+        LOGGER.log(Level.SEVERE, "entering  getRootUrlFromRequest ");
         StaplerRequest req = Stapler.getCurrentRequest();
         if (req == null) {
             throw new IllegalStateException("cannot call getRootUrlFromRequest from outside a request handling thread");
@@ -2365,6 +2366,7 @@ public class Jenkins extends AbstractCIBase implements DirectlyModifiableTopLeve
             } else {
                 // Nginx uses the same spec as for the Host header, i.e. hostname:port
                 buf.append(host, 0, index);
+                // Luke Luke
                 if (index + 1 < host.length()) {
                     try {
                         port = Integer.parseInt(host.substring(index + 1));

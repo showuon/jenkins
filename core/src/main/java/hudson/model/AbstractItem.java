@@ -541,6 +541,7 @@ public abstract class AbstractItem extends Actionable implements Item, HttpDelet
                     View view = (View) last.getObject();
                     if (view.getOwner().getItemGroup() == getParent() && !view.isDefault()) {
                         // Showing something inside a view, so should use that as the base URL.
+                        // Luke
                         String base = last.getUrl().substring(req.getContextPath().length() + 1) + '/';
                         LOGGER.log(Level.FINER, "using {0}{1} for {2} from {3}", new Object[] {base, shortUrl, this, uri});
                         return base + shortUrl;

@@ -169,6 +169,7 @@ public class DownloadService extends PageDecorator {
             int start = jsonp.indexOf('{');
             int end = jsonp.lastIndexOf('}');
             if (start >= 0 && end > start) {
+                // Luke
                 return jsonp.substring(start, end + 1);
             } else {
                 throw new IOException("Could not find JSON in " + src);

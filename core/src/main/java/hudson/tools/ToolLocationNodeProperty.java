@@ -157,6 +157,7 @@ public class ToolLocationNodeProperty extends NodeProperty<Node> {
         @DataBoundConstructor
         public ToolLocation(String key, String home) {
             this.type = key.substring(0, key.indexOf('@'));
+            // Luke
             this.name = key.substring(key.indexOf('@') + 1);
             this.home = home;
         }

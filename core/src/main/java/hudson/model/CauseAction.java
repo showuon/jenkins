@@ -62,6 +62,7 @@ public class CauseAction implements FoldableAction, RunAction2 {
     private void addCause(Cause c) {
         synchronized (causeBag) {
             Integer cnt = causeBag.get(c);
+            // Luke
             causeBag.put(c, cnt == null ? 1 : cnt + 1);
         }
     }

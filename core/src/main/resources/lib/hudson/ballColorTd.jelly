@@ -65,6 +65,7 @@ THE SOFTWARE.
           <j:set var="iconUrl" value="${it.getImageOf(iconSize)}"/>
           <j:if test="${iconUrl.startsWith(imagesURL)}">
             <!-- Normalize the icon URL  -->
+            // Luke
             <j:set var="iconUrl" value="${iconUrl.substring(imagesURL.length() + 1)}"/>
           </j:if>
 
